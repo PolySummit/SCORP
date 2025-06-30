@@ -1,0 +1,23 @@
+[submodule "submodules/TRELLIS"]
+	path = submodules/TRELLIS
+	url = https://github.com/microsoft/TRELLIS.git
+[submodule "submodules/sam2"]
+	path = submodules/sam2
+	url = https://github.com/z1V-Chan/sam2-gsobj.git
+[submodule "submodules/diff-surfel-rasterization"]
+	path = submodules/diff-surfel-rasterization
+	url = https://github.com/hbb1/diff-surfel-rasterization.git
+	ignore = all
+[submodule "submodules/simple-knn"]
+	path = submodules/simple-knn
+	url = https://github.com/z1V-Chan/simple-knn-clone.git
+	ignore = all
+[submodule "submodules/diff-gaussian-rasterization"]
+	path = submodules/diff-gaussian-rasterization
+	url = https://github.com/ashawkey/diff-gaussian-rasterization.git
+[submodule "submodules/GroundingDINO"]
+	path = submodules/GroundingDINO
+	url = https://github.com/IDEA-Research/GroundingDINO.git
+[submodule "submodules/mast3r/asmk"]
+	path = submodules/mast3r/asmk
+	url = https://github.com/jenicek/asmk
