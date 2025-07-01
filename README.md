@@ -8,8 +8,10 @@ RAISE (Refine Any Object In any ScenE) is a 3D enhancement framework that addres
 
 ## Installation
 
-To set up the environment, you can use the provided `environment.yml` file. This file contains all the necessary dependencies for running the code.
-
+To set up the environment, you can use the provided `environment.yml` file.
+```bash
+conda env create -f environment.yml
+```
 Otherwise, you can manually install the required packages according to `setup.bash`.
 
 Especially for Trellis environment, you can follow the instructions in the [Trellis repository](https://github.com/microsoft/TRELLIS).
