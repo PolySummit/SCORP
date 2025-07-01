@@ -140,9 +140,9 @@ python post_refine_gs.py \
     --eval \
     --split_yml_name ${split_yml_name}
 ```
-</details>
 
 After this process, the refined GS-based object will be saved in the `${model_path}/refined_aligned` directory. The `--images` parameter should point to the directory containing the masked images of the target object. The `--iterations` specifies the number of optimization iterations of the appearance refinement.
+</details>
 
 ### Render
 <details><summary>Click to expand</summary>
