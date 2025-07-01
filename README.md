@@ -158,6 +158,7 @@ python render_3dgs.py \
 ```
 
 After this process, the rendered images of the GS-based object in testing views will be saved in the `${model_path}/rendered_refined` directory. The `--iter` parameter should match the number of iterations used in the [refinement](#Refinement) step.
+</details>
 
 ## Acknowledgements
 
