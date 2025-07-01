@@ -2,10 +2,11 @@
 # RAISE: Refine Any Object in Any Scene
 [![arXiv](https://img.shields.io/badge/arXiv-2506.23835-b31b1b.svg)](https://arxiv.org/abs/2506.23835)
 
-![Preview](https://github.com/tmKamal/hosted-images/blob/master/under-construction/Document.gif?raw=true)
+RAISE (Refine Any Object In any ScenE) is a 3D enhancement framework that addresses the challenge of missing object viewpoints in scene reconstruction. By leveraging 3D generative priors, RAISE substitutes degraded objects with 3D proxies and progressively refines their geometry and texture via pose alignment and registration-constrained enhancement. This ensures high-fidelity object recovery while preserving scene-level consistency. RAISE outperforms existing methods in novel view synthesis and geometry completion tasks.
 
-## Environment
+![Preview](./assets/fig1.pdf.png)
 
+## Installation
 
 To set up the environment, you can use the provided `environment.yml` file. This file contains all the necessary dependencies for running the code.
 

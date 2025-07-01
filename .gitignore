@@ -13,8 +13,8 @@ temp.py
 
 .vscode
 
-*.png
-*.jpg
+# *.png
+# *.jpg
 
 weights
 
