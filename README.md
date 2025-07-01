@@ -16,14 +16,20 @@ Otherwise, you can manually install the required packages according to `setup.ba
 
 Especially for Trellis environment, you can follow the instructions in the [Trellis repository](https://github.com/microsoft/TRELLIS).
 
+As for checkpoints, you should make sure to download the following checkpoints and place them in the corresponding paths:
+- [`checkpoints/GroundingDINO/groundingdino_swinb_cogcoor.pth` & `submodules/GroundingDINO/groundingdino/config/GroundingDINO_SwinB_cfg.py`](https://github.com/IDEA-Research/GroundingDINO)
+- [`checkpoints/sam2.1/sam2.1_hiera_large.pt` & `configs/sam2.1/sam2.1_hiera_l.yaml`](https://github.com/facebookresearch/segment-anything-2)
+- [`checkpoints/mast3r/MASt3R_ViTLarge_BaseDecoder_512_catmlpdpt_metric.pth`](https://github.com/naver/mast3r)
+- [`checkpoints/TRELLIS/TRELLIS-image-large`](https://github.com/microsoft/TRELLIS)
+
 ## Data Folder Structure
 
 The folder structure for a dataset should be organized as follows:
 
 ```
 objects_office_d455/
-├── depths_cam/             # Contains camera-based depth data. Optional.
-├── depths_est/             # Contains estimated depth data. Optional.
+├── depths_cam/             # Contains camera-based depth data. (Optional)
+├── depths_est/             # Contains estimated depth data. (Optional)
 ├── images/                 # Contains image files.
 ├── sparse/                 # Contains sparse reconstruction data in COLMAP format. (W2C)
 ├── description.yml         # YAML file describing dataset details.
