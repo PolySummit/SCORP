@@ -13,7 +13,9 @@ Otherwise, you can manually install the required packages according to `setup.ba
 
 Especially for Trellis environment, you can follow the instructions in the [Trellis repository](https://github.com/microsoft/TRELLIS).
 
-## Folder Structure
+## Data Folder Structure
+
+The folder structure for a dataset should be organized as follows:
 
 ```
 objects_office_d455/
@@ -22,21 +24,22 @@ objects_office_d455/
 ├── images/                 # Contains image files.
 ├── sparse/                 # Contains sparse reconstruction data in COLMAP format. (W2C)
 ├── description.yml         # YAML file describing dataset details.
-└── split.yml               # YAML file specifying dataset splits.
+└── split.yml               # YAML file specifying dataset splits for training and testing.
 ```
 
 ## Pipeline
 
 ### 2D Segmentation
-
+<details><summary>Click to expand</summary>
 ``` bash
 python ./segmentation_2d.py -s ${data_path}
 ```
 
-After completing this process, the masks for each target object will be located in the directory named `masked_image_rgba` within the source path.
+After this process, the masks for each target object will be located in the directory `${data_path}/masked_image_rgba`. 
+</details>
 
 ### Reconstruction
-
+<details><summary>Click to expand</summary>
 ``` bash
 python train_3dgs.py \
     -s ${data_path} \
@@ -46,7 +49,12 @@ python train_3dgs.py \
     --split_yml_name ${split_yml_name} \
 ```
 
+After this process, the reconstructed GS-based scene will be saved in the `${model_path}`. The `${model_path}` should be a directory where the model will be stored. `${split_yml_name}` is the name of the split YAML file.
+</details>
+
 ### 3D Segmentation
+
+<details><summary>Click to expand</summary>
 
 ``` bash
 python segmentation_3dgs.py \
@@ -57,7 +65,12 @@ python segmentation_3dgs.py \
     --split_yml_name ${split_yml_name}
 ```
 
+After this process, the segmentation results will be saved in the `${data_path}/gs_seg` directory. The 3D segmentation results will be in the form of GS models with same names of target objects and the same extension `.ply`. 
+
+</details>
+
 ### View Selection
+<details><summary>Click to expand</summary>
 
 ``` bash
 python view_selection.py \
@@ -68,13 +81,21 @@ python view_selection.py \
     --split_yml_name ${split_yml_name}
 ```
 
+After this process, the selected views will be saved in the `${data_path}/masked_image_rgba_selected` directory.
+</details>
+
 ### Generation
+<details><summary>Click to expand</summary>
 
 ``` bash
 ${trellis_env}/bin/python trellis_img2gs.py -m ${model_path} 
 ```
 
+After this process, the generated GS-based object will be saved in the `${model_path}/generated` directory. The `${trellis_env}` is the path to the Trellis environment, which is required for this step.
+</details>
+
 ### Truncation
+<details><summary>Click to expand</summary>
 
 ``` bash
 python truncation_opacity.py \
@@ -82,7 +103,11 @@ python truncation_opacity.py \
     --threshold 0.1 \
 ```
 
+After this process, the gaussians with opacity below the threshold will be removed from the GS model. The modified GS model will be saved in the `${model_path}/generated` directory while the previous GS model will be saved in the same directory with an additional extension name `.ply.bak`. The `--threshold` parameter can be adjusted to control the truncation level.
+</details>
+
 ### Alignment
+<details><summary>Click to expand</summary>
 
 ``` bash
 python align_3dgs_clpe_9dof.py \
@@ -92,7 +117,12 @@ python align_3dgs_clpe_9dof.py \
     --split_yml_name ${split_yml_name}
 ```
 
+After this process, the
+
+</details>
+
 ### Refinement
+<details><summary>Click to expand</summary>
 
 ``` bash
 python post_refine_gs.py \
@@ -105,6 +135,7 @@ python post_refine_gs.py \
     --eval \
     --split_yml_name ${split_yml_name}
 ```
+</details>
 
 ## Acknowledgements
 
