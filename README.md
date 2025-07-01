@@ -28,10 +28,11 @@ objects_office_d455/
 └── split.yml               # YAML file specifying dataset splits for training and testing.
 ```
 
-## Pipeline
+## Instruction
 
 ### 2D Segmentation
 <details><summary>Click to expand</summary>
+
 ``` bash
 python ./segmentation_2d.py -s ${data_path}
 ```
@@ -41,6 +42,7 @@ After this process, the masks for each target object will be located in the dire
 
 ### Reconstruction
 <details><summary>Click to expand</summary>
+
 ``` bash
 python train_3dgs.py \
     -s ${data_path} \
@@ -118,7 +120,7 @@ python align_3dgs_clpe_9dof.py \
     --split_yml_name ${split_yml_name}
 ```
 
-After this process, the
+After this process, the aligned GS-based object will be saved in the `${model_path}/generated_aligned` directory. The visual result of the matching between the GS-based object and the broken target object in each iteration will be saved in the `${model_path}/visual_match`.
 
 </details>
 
@@ -137,6 +139,23 @@ python post_refine_gs.py \
     --split_yml_name ${split_yml_name}
 ```
 </details>
+
+After this process, the refined GS-based object will be saved in the `${model_path}/refined_aligned` directory. The `--images` parameter should point to the directory containing the masked images of the target object. The `--iterations` specifies the number of optimization iterations of the appearance refinement.
+
+### Render
+<details><summary>Click to expand</summary>
+
+``` bash
+python render_3dgs.py \
+    -s ${data_path} \
+    -m ${model_path} \
+    -r 1 \
+    --iter 800 \
+    --eval \
+    --split_yml_name ${split_yml_name}
+```
+
+After this process, the rendered images of the GS-based object in testing views will be saved in the `${model_path}/rendered_refined` directory. The `--iter` parameter should match the number of iterations used in the [refinement](#Refinement) step.
 
 ## Acknowledgements
 
