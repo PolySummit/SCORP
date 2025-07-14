@@ -28,7 +28,7 @@ As for checkpoints, you should make sure to download the following checkpoints a
 The folder structure for a dataset should be organized as follows:
 
 ```
-objects_office_d455/
+scene/
 ├── depths_cam/             # Contains camera-based depth data. (Optional)
 ├── depths_est/             # Contains estimated depth data. (Optional)
 ├── images/                 # Contains image files.
@@ -36,6 +36,8 @@ objects_office_d455/
 ├── description.yml         # YAML file describing dataset details.
 └── split.yml               # YAML file specifying dataset splits for training and testing.
 ```
+
+The folder `config` contains example YAML files for two scenes, `split.yml` and `description.yml`. You can use these files as templates for your own dataset. 
 
 ## Instruction
 <details><summary>Click to expand</summary>

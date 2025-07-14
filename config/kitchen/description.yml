@@ -1,0 +1,16 @@
+detect_conf: 0.27
+ext: "JPG"
+first_image_name: "DSCF0733"
+iteration: 25000
+prompts: "lego bulldozer"
+unseen_ratio: 0.6
+
+# for view selection
+rerender: false
+img_num: 4
+
+# for alignment
+num_iterations: 6
+opt_shape_iterations:
+  - 3
+cam_list_interval: 8

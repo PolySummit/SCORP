@@ -1,0 +1,16 @@
+# for segmentation
+detect_conf: 0.2
+ext: "png"
+first_image_name: "frame_00100"
+iteration: 30000
+prompts: "yellow bottle,red bag,light green bowl"
+
+# for view selection
+img_num: 3
+
+# for alignment
+num_iterations: 6
+opt_shape_iterations:
+  - 3
+  - 4
+cam_list_interval: 8
