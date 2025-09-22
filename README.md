@@ -1,9 +1,9 @@
 
-# SCORP: cene-Consistent Object Refinement via Proxy Generation and Tuning
+# SCORP: Scene-Consistent Object Refinement via Proxy Generation and Tuning
 [![Website](assets/badge-website.svg)](https://polysummit.github.io/raise.github.io/)
 [![arXiv](https://img.shields.io/badge/arXiv-2506.23835-b31b1b.svg)](https://arxiv.org/abs/2506.23835)
 
-SCORP: (cene-Consistent Object Refinement via Proxy Generation and Tuning) is a 3D enhancement framework that addresses the challenge of missing object viewpoints in scene reconstruction. By leveraging 3D generative priors, SCORP substitutes degraded objects with 3D proxies and progressively refines their geometry and texture via pose alignment and registration-constrained enhancement. This ensures high-fidelity object recovery while preserving scene-level consistency. SCORP outperforms existing methods in novel view synthesis and geometry completion tasks.
+SCORP: (Scene-Consistent Object Refinement via Proxy Generation and Tuning) is a 3D enhancement framework that addresses the challenge of missing object viewpoints in scene reconstruction. By leveraging 3D generative priors, SCORP substitutes degraded objects with 3D proxies and progressively refines their geometry and texture via pose alignment and registration-constrained enhancement. This ensures high-fidelity object recovery while preserving scene-level consistency. SCORP outperforms existing methods in novel view synthesis and geometry completion tasks.
 
 ![Preview](./assets/fig1.pdf.png)
 
