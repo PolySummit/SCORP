@@ -185,8 +185,8 @@ We extend our sincere gratitude to the following tools and libraries that were i
 ## Citation
 If you find this paper or the code helpful for your work, please consider citing our preprint,
 ```
-@misc{chen2025refineobjectscene,
-      title={Refine Any Object in Any Scene}, 
+@misc{chen2025scorpsceneconsistentobjectrefinement,
+      title={SCORP: Scene-Consistent Object Refinement via Proxy Generation and Tuning}, 
       author={Ziwei Chen and Ziling Liu and Zitong Huang and Mingqi Gao and Feng Zheng},
       year={2025},
       eprint={2506.23835},
