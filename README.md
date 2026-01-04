@@ -1,5 +1,9 @@
 
 # SCORP: Scene-Consistent Object Refinement via Proxy Generation and Tuning
+<div align="center">
+  <h3>WACV 2026</h3>
+</div>
+
 [![Website](assets/badge-website.svg)](https://polysummit.github.io/scorp.github.io/)
 [![arXiv](https://img.shields.io/badge/arXiv-2506.23835-b31b1b.svg)](https://arxiv.org/abs/2506.23835)
 
