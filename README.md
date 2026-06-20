@@ -189,13 +189,11 @@ We extend our sincere gratitude to the following tools and libraries that were i
 ## Citation
 If you find this paper or the code helpful for your work, please consider citing our preprint,
 ```
-@misc{chen2025scorpsceneconsistentobjectrefinement,
-      title={SCORP: Scene-Consistent Object Refinement via Proxy Generation and Tuning}, 
-      author={Ziwei Chen and Ziling Liu and Zitong Huang and Mingqi Gao and Feng Zheng},
-      year={2025},
-      eprint={2506.23835},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2506.23835}, 
+@inproceedings{chen2026scorp,
+  title={SCORP: Scene-Consistent Object Refinement via Proxy Generation and Tuning},
+  author={Chen, Ziwei and Liu, Ziling and Huang, Zitong and Gao, Mingqi and Zheng, Feng},
+  booktitle={Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision},
+  pages={795--805},
+  year={2026}
 }
 ```
